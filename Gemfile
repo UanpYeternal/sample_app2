@@ -8,7 +8,14 @@ gem 'rails', '4.0.0'
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
 	gem 'rspec-rails', '2.13.1'
+	gem 'guard-rspec', '2.5.0'
+	gem 'spork-rails', github: 'railstutorial/spork-rails'
+    gem 'guard-spork', '1.5.0'
+    gem 'childprocess', '0.3.6'
 end
+
+# Uncomment these lines on Linux.
+gem 'libnotify', '0.8.0'
 
 group :test do
 	gem 'selenium-webdriver', '2.0.0'
@@ -44,6 +51,8 @@ end
 group :production do
 	gem 'pg', '0.15.1'
 end
+
+gem 'rb-readline', '0.4.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
